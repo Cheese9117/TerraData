@@ -23,7 +23,7 @@ document.querySelectorAll(".sensor-btn").forEach((btn) => {
   btn.addEventListener("click", () => togglePanel(btn));
 });
 
-const websocket = new WebSocket('ws://192.168.0.16:8765');
+const websocket = new WebSocket('ws://dress.ip:8765');
 
 websocket.onopen = () => {
   console.log('Conectado al servidor WebSocket');

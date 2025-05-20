@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TerraData</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>TerraData</h1>
+
+  <div class="cards">
+    <div class="card-wrapper">
+      <button class="sensor-btn" data-panel="humedad-panel">Humedad</button>
+      <div class="panel" id="humedad-panel">
+        <div class="panel-content">
+          <div class="sensor-display">
+            Humedad actual: <span class="value" id="humedad-value">--</span> %
+          </div>
+          <div class="sensor-display">
+            Valor Analógico: <span class="value" id="valor-analogico-value">--</span>
+          </div>
+          <div class="visualization">
+            <div class="container small">
+              <div class="water" id="water"></div>
+              <div class="markers">
+                <div class="marker" data-value="100" style="top: 0%;"></div>
+                <div class="marker" data-value="75" style="top: 25%;"></div>
+                <div class="marker" data-value="50" style="top: 50%;"></div>
+                <div class="marker" data-value="25" style="top: 75%;"></div>
+                <div class="marker" data-value="0" style="top: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrapper">
+      <button class="sensor-btn" data-panel="temp-panel">Temperatura</button>
+      <div class="panel" id="temp-panel">
+        <div class="panel-content">
+          <div class="sensor-display">
+            Temperatura actual: <span class="value" id="temp-value">--</span> °C
+          </div>
+          <div class="visualization">
+            <div class="thermometer-container small">
+              <div class="thermometer">
+                <div class="bulb"></div>
+                <div class="stem">
+                  <div class="fluid" id="thermometer-fluid"></div>
+                </div>
+              </div>
+              <div class="thermometer-markers">
+                <div class="thermometer-marker" data-value="40" style="bottom: 0%;"></div>
+                <div class="thermometer-marker" data-value="30" style="bottom: 25%;"></div>
+                <div class="thermometer-marker" data-value="20" style="bottom: 50%;"></div>
+                <div class="thermometer-marker" data-value="10" style="bottom: 75%;"></div>
+                <div class="thermometer-marker" data-value="0" style="bottom: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
